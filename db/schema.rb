@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_31_001716) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_31_013035) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_31_001716) do
     t.string "tipo_atleta"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "team_id", null: false
+    t.index ["team_id"], name: "index_athletes_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -39,5 +41,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_31_001716) do
     t.index ["athletes_id"], name: "index_teams_on_athletes_id"
   end
 
+  add_foreign_key "athletes", "teams"
   add_foreign_key "teams", "athletes", column: "athletes_id"
 end

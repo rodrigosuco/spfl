@@ -7,14 +7,14 @@
 
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl">Athletes</h1>
-    <%= link_to "New athlete", new_athlete_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <%= link_to "New athlete", new_athlete_path, class: "custom-button" %>
   </div>
 
   <div id="athletes" class="min-w-full">
     <% @athletes.each do |athlete| %>
       <%= render athlete %>
       <p>
-        <%= link_to "Show this athlete", athlete, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+        <%= link_to "Show this athlete", athlete, class: "custom-button" %>
       </p>
     <% end %>
   </div>

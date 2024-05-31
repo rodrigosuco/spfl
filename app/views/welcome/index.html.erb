@@ -1,4 +1,15 @@
-<div>
-  <h1 class="font-bold text-4xl">Bem-vindo a SPFL</h1>
-  <p>New football state</p>
+<div id="container-principal" class="flex items-start justify-between">
+  <div class="flex items-start">
+    <img id="logo-principal" src="<%= asset_path("sao_paulo_football_league.png") %>" alt="Imagem">
+    <div class="ml-4">
+      <h1 class="font-bold text-4xl">Bem-vindo à SPFL</h1>
+      <h2>A maior e melhor liga estadual do Brasil.</h2>
+      <h3>New football state.</h3>
+    </div>
+  </div>
+  <div class="image-slider ml-16">
+    <img id="fotos" src="<%= asset_path("org__caragua-ghostship-vs-corinthians-steamrollers-19775ac19858.jpg") %>" alt="Imagem 1" class="active">
+    <img id="fotos" src="<%= asset_path("org__caragua-ghostship-vs-corinthians-steamrollers-b9d4cce6352c.jpg") %>" alt="Imagem 2">
+    <img id="fotos" src="<%= asset_path("5e5a8874-275.jpg") %>" alt="Imagem 3">
+  </div>
 </div>
