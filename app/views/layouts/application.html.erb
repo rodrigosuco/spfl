@@ -1,19 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Spfl</title>
+    <title>SPFL</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
+    <%= favicon_link_tag(source = "sao_paulo_football_league.png") %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <nav>
+      <div class="navbar-container">
+        <div class="navbar-logo">
+          <img src="<%= asset_path("sao_paulo_football_league.png")%>" alt="Logo">
+          <span class="font-semibold text-xl" style="color: #cbd5e0;">São Paulo Football League</span>
+        </div>
+        <ul class="navbar-menu">
+          <li>
+            <a href="<%= root_path %>" >Home</a>
+          </li>
+          <li>
+            <a href="<%= teams_path %>">Times</a>
+          </li>
+          <li>
+            <a href="<%= athletes_path %>">Atletas</a>
+          </li>
+          <li>
+            <a href="#">Sobre</a>
+          </li>
+          <li>
+            <a href="#">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>
   </body>
+  <footer>
+    <div class="footer-container">
+      <p class="footer-text">© <%= Time.now.year %> SPFL. | Desenvolvido por @rodrigosuco | Contato: <a href="mailto:rod1dev@proton.me">rod1dev@proton.me</a></p>
+    </div>
+  </footer>
 </html>

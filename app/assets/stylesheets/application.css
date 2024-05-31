@@ -13,3 +13,76 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: #1a202c;
+
+}
+
+
+nav {
+  background-color: #1a202c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+.navbar-logo img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+.navbar-menu {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+.navbar-menu li {
+  margin-left: 20px;
+}
+.navbar-menu li a {
+  text-decoration: none;
+  color: #cbd5e0;
+  transition: color 0.3s ease;
+}
+.navbar-menu li a:hover {
+  color: #ff280c;
+}
+
+h1 {
+  color: #cbd5e0;
+
+}
+
+p {
+  color: #cbd5e0;
+}
+
+footer {
+  background-color: #1a202c; /* Fundo escuro */
+  color: #cbd5e0; /* Cor do texto (cinza claro) */
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  margin-top: 20px;
+}
+
+.footer-container {
+  max-width: 1200px; /* Largura máxima */
+  margin: 0 auto; /* Centralizar */
+}
+
+.footer-text {
+  font-size: 14px; /* Tamanho do texto */
+}
