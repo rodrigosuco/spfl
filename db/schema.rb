@@ -11,9 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2024_05_31_013035) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "athletes", force: :cascade do |t|
     t.string "nome"
     t.integer "numero"
@@ -21,14 +18,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_31_013035) do
     t.string "tipo_atleta"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "team_id", null: false
+    t.integer "team_id", null: false
     t.index ["team_id"], name: "index_athletes_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|
     t.string "nome"
     t.string "endereco"
-    t.bigint "athletes_id"
+    t.integer "athletes_id"
     t.text "historia"
     t.text "infos"
     t.string "titulo"
